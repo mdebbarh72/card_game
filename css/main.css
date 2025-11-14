@@ -1,0 +1,39 @@
+.font-algerian {
+            font-family: 'Algerian', 'Impact', sans-serif;
+            font-weight: 400; 
+        }
+        
+        
+        .stars-container {
+            display: flex;
+            justify-content: flex-end; 
+            flex-wrap: nowrap; 
+            padding-left: 0.5rem; 
+        }
+
+        @media (max-width: 400px) {
+            .stars-container {
+                flex-wrap: wrap; 
+                justify-content: center; 
+            }
+        }
+
+        
+        .card-grid {
+            
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr)); 
+            gap: 1rem; 
+        }
+
+        @media (min-width: 640px) { 
+            .card-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)); 
+            }
+        }
+
+        @media (min-width: 1024px) { 
+            .card-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr)); 
+            }
+        }
