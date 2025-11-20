@@ -20,6 +20,18 @@ let cards=[];
 
     const jsonFilePath= '/cardsData.json';
     cards= await fetchData(jsonFilePath);
+    function quantity(cards)
+{
+    let somme=0
+    for(let i=0; i<cards.length; i++)
+    {
+        somme+= cards[i].quantity
+    }
+
+    return somme;
+}
+
+console.log(quantity(cards))
     const path = window.location.pathname.split('/').pop();
     if(path === 'market.html')
 {
@@ -224,4 +236,17 @@ function update_cart( id )
     else {alert('the already added')}
     
 }
+
+
+
+
+
+// function filterCards( letter){
+//     document.querySelectorAll('.cardLayer').forEach(card  => () {
+//         console.log(card)
+//     })
+// }
+
+// filterCards('s')
+
 
